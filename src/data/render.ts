@@ -23,59 +23,49 @@ function formatShelfText(shelf: Shelf) {
   return ` - ${shelf.items.join(", ")}`;
 }
 
+// 0─────────1
+// ├────○────┤
+// 3─────────2
+const ASCII_EDGES: Record<ZoneType, string[]> = {
+  [ZoneType.CABINET]: ["┬", "┬", "┘", "└"],
+  [ZoneType.FUMEHOOD]: ["┌", "┐", "┘", "└"],
+  [ZoneType.FREEZER]: ["┌", "┐", "┘", "└"],
+  [ZoneType.BENCH]: [" ", " ", " ", " "],
+  [ZoneType.SINK]: ["┌", "┐", "┘", "└"],
+  [ZoneType.RACK]: ["┬", "┬", "┴", "┴"],
+};
+
+const ASCII_LINE: Record<ZoneType, string> = {
+  [ZoneType.CABINET]: "├────○────┤",
+  [ZoneType.FUMEHOOD]: "├─────────┤",
+  [ZoneType.FREEZER]: "│   ❄️    │",
+  [ZoneType.BENCH]: "───────────",
+  [ZoneType.SINK]: "├─────────┤",
+  [ZoneType.RACK]: "├─────────┤",
+};
+
+const BASE_LINE = "─────────";
+
 export function generateZoneAsciiArt(zone: Zone): string {
-  const shelves = zone.shelves!;
+  let shelves: Shelf[] = zone.shelves!;
   const lines: string[] = [];
 
-  switch (zone.type) {
-    case ZoneType.CABINET: {
-      const topShelf = shelves.find((s) => s.name?.toLowerCase() === "top");
-      const innerShelves = shelves.filter((s) => s !== topShelf);
+  const edges = ASCII_EDGES[zone.type];
+  const line = ASCII_LINE[zone.type];
 
-      if (topShelf) {
-        lines.push(`           ${formatShelfText(topShelf)}`);
-      }
-
-      lines.push("┬─────────┬");
-      innerShelves.forEach((shelf) => {
-        lines.push(`├────○────┤${formatShelfText(shelf)}`);
-      });
-      lines.push("└─────────┘");
-      break;
-    }
-
-    case ZoneType.RACK: {
-      lines.push("┬─────────┬");
-      shelves.forEach((shelf) => {
-        lines.push(`├─────────┤${formatShelfText(shelf)}`);
-      });
-      lines.push("┴─────────┴");
-      break;
-    }
-
-    case ZoneType.FREEZER: {
-      lines.push("┌─────────┐");
-      shelves.forEach((shelf, index) => {
-        lines.push(`│   ❄️    │${formatShelfText(shelf)}`);
-        if (index < shelves.length - 1) {
-          lines.push("├─────────┤");
-        }
-      });
-      if (shelves.length === 0) {
-        lines.push("│   ❄️    │");
-      }
-      lines.push("└─────────┘");
-      break;
-    }
-
-    case ZoneType.BENCH: {
-      lines.push("           ");
-      shelves.forEach((shelf) => {
-        lines.push(`───────────${formatShelfText(shelf)}`);
-      });
-      break;
-    }
+  if (zone.type === ZoneType.CABINET) {
+    const topShelf = shelves.find((s) => s.name?.toLowerCase() === "top");
+    if (topShelf) lines.push(`           ${formatShelfText(topShelf)}`);
+    shelves = shelves.filter((s) => s !== topShelf);
   }
+
+  lines.push(`${edges[0]}${BASE_LINE}${edges[1]}`);
+
+  for (const shelf of shelves) {
+    lines.push(`${line}${formatShelfText(shelf)}`);
+  }
+
+  lines.push(`${edges[3]}${BASE_LINE}${edges[2]}`);
 
   return lines.join("\n");
 }
