@@ -1,0 +1,153 @@
+rooms:
+  - name: "1"
+    x: 0
+    y: 0
+    w: 9
+    h: 18
+    zones:
+      - name: "Стол Королёвой"
+        type: "bench"
+        x: 0
+        y: 0
+        w: 5
+        h: 2
+      - name: ""
+        type: "bench"
+        x: 0
+        y: 2
+        w: 3
+        h: 1
+      - name: "ВЭЖХ"
+        type: "bench"
+        x: 6
+        y: 0
+        w: 3
+        h: 3
+      - name: "Стол весы"
+        type: "bench"
+        x: 6
+        y: 3
+        w: 3
+        h: 6
+      - name: "Шкаф"
+        type: "cabinet"
+        x: 6
+        y: 9
+        w: 3
+        h: 3
+        shelves:
+          - name: "top"
+            items: ["щёлочь", "кислота", "эппендорфы", "шприцы"]
+          - name: "1"
+            items: ["?"]
+          - name: "2"
+            items: ["ацетатные фильтры"]
+          - name: "3"
+            items: ["чистые эппендорфы"]
+      - name: "Шкаф"
+        type: "cabinet"
+        x: 0
+        y: 15
+        w: 3
+        h: 3
+      - name: "Шкаф"
+        type: "cabinet"
+        x: 3
+        y: 15
+        w: 3
+        h: 3
+      - name: "Шкаф"
+        type: "cabinet"
+        x: 6
+        y: 15
+        w: 3
+        h: 3
+      - name: "Холодильник"
+        type: "freezer"
+        x: 0
+        y: 3
+        w: 3
+        h: 3
+      - name: "Форез"
+        type: "bench"
+        x: 0
+        y: 6
+        w: 3
+        h: 6
+
+  - name: "2"
+    x: 9
+    y: 0
+    w: 18
+    h: 18
+    zones:
+      - name: ""
+        type: "bench"
+        x: 0
+        y: 0
+        w: 3
+        h: 9
+      - name: "Холодильник"
+        type: "freezer"
+        x: 0
+        y: 9
+        w: 3
+        h: 3
+      - name: ""
+        type: "bench"
+        x: 6
+        y: 0
+        w: 3
+        h: 9
+      - name: ""
+        type: "bench"
+        x: 9
+        y: 0
+        w: 3
+        h: 9
+      - name: ""
+        type: "bench"
+        x: 15
+        y: 0
+        w: 3
+        h: 12
+      - name: "Сушильный шкаф"
+        type: "cabinet"
+        x: 6
+        y: 9
+        w: 6
+        h: 3
+      - name: "Раковины"
+        type: "sink"
+        x: 15
+        y: 12
+        w: 3
+        h: 6
+      - name: "Шкаф"
+        type: "cabinet"
+        x: 0
+        y: 15
+        w: 3
+        h: 3
+      - name: ""
+        type: "cabinet"
+        x: 3
+        y: 15
+        w: 3
+        h: 3
+      - name: ""
+        type: "bench"
+        x: 6
+        y: 15
+        w: 6
+        h: 3
+
+doors:
+  - x1: 9
+    y1: 12
+    x2: 9
+    y2: 15
+  - x1: 21
+    y1: 18
+    x2: 24
+    y2: 18

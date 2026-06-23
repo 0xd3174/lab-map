@@ -1,0 +1,30 @@
+{
+  "name": "lab-map",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
+    "lint": "oxlint .",
+    "format": "oxfmt .",
+    "prepare": "bun x lefthook install"
+  },
+  "devDependencies": {
+    "@rollup/plugin-yaml": "^5.0.0",
+    "@sveltejs/vite-plugin-svelte": "^7.1.2",
+    "@tsconfig/svelte": "^5.0.8",
+    "@types/node": "^24.12.3",
+    "lefthook": "^2.1.9",
+    "oxfmt": "^0.55.0",
+    "oxlint": "^1.70.0",
+    "panzoom": "^9.4.4",
+    "rollup-plugin-visualizer": "^7.0.1",
+    "svelte": "^5.55.5",
+    "svelte-check": "^4.4.8",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.12"
+  }
+}
