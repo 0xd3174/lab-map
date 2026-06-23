@@ -12,7 +12,18 @@
     onZoomOut?: () => void;
     onZoomReset?: () => void;
   } = $props();
+
+  let searchElement: HTMLInputElement;
 </script>
+
+<svelte:window
+  onkeydown={(e) => {
+    if (e.ctrlKey && e.key === "k") {
+      e.preventDefault();
+      searchElement.focus();
+    }
+  }}
+/>
 
 <header>
   <div class="search-container">
@@ -23,7 +34,13 @@
         clip-rule="evenodd"
       />
     </svg>
-    <input type="text" bind:value={searchQuery} placeholder="Поиск..." class="search-input" />
+    <input
+      bind:this={searchElement}
+      type="text"
+      bind:value={searchQuery}
+      placeholder="Поиск..."
+      class="search-input"
+    />
     {#if searchQuery}
       <button class="clear-btn" onclick={() => (searchQuery = "")} aria-label="Clear">×</button>
     {/if}
