@@ -1,5 +1,4 @@
 <script lang="ts">
-	import './app.css';
 	import Header from './components/Header.svelte';
 	import LabMap from './components/LabMap.svelte';
 	import ZonePopup from './components/ZonePopup.svelte';
