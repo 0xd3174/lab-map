@@ -113,19 +113,13 @@
 		fill="url(#grid)"
 	/>
 
-	<svg x={GAP_SIZE} y={GAP_SIZE} width={LAB_WIDTH} height={LAB_HEIGHT}>
+	<g transform="translate({GAP_SIZE}, {GAP_SIZE})">
 		{#each ROOMS as room}
-			<svg
-				x={room.x}
-				y={room.y}
-				width={room.w}
-				height={room.h}
-				viewBox="0 0 {room.w} {room.h}"
-			>
+			<g transform="translate({room.x}, {room.y})">
 				<!-- Walls -->
 				<rect
-					width="100%"
-					height="100%"
+					width={room.w}
+					height={room.h}
 					fill="none"
 					stroke={colors.slate400}
 					stroke-width="4"
@@ -145,7 +139,7 @@
 						<Zone {zone} />
 					{/each}
 				</svg>
-			</svg>
+			</g>
 		{/each}
 
 		<!-- Doors -->
@@ -160,5 +154,5 @@
 				stroke-linecap="square"
 			/>
 		{/each}
-	</svg>
+	</g>
 </svg>
