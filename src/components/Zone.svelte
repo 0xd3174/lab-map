@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ZONE_COLORS } from '../data/render';
-	import cssVariables from '../lib/css-variables';
+	import colors from '../lib/colors';
 	import { mapState } from '../lib/state.svelte';
 	import type { Zone } from '../lib/types';
 
@@ -59,7 +59,7 @@
 		text-anchor="middle"
 		dominant-baseline="middle"
 		class="zone-label"
-		fill={cssVariables.colorSlate700}
+		fill={colors.slate700}
 	>
 		{zone.name}
 	</text>
@@ -70,7 +70,7 @@
 			text-anchor="middle"
 			dominant-baseline="middle"
 			class="zone-sublabel"
-			fill={cssVariables.colorSlate500}
+			fill={colors.slate500}
 		>
 			{zone.sublabel}
 		</text>

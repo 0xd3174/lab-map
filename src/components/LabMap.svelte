@@ -2,7 +2,7 @@
 	import panzoom, { type PanZoom } from 'panzoom';
 	import { onMount } from 'svelte';
 
-	import cssVariables from '../lib/css-variables';
+	import colors from '../lib/colors';
 	import { mapState } from '../lib/state.svelte';
 	import {
 		ROOMS,
@@ -96,14 +96,14 @@
 		height={CELL_SIZE / 2}
 		patternUnits="userSpaceOnUse"
 	>
-		<circle cx="2" cy="2" r="1" fill={cssVariables.colorSlate300} />
+		<circle cx="2" cy="2" r="1" fill={colors.slate300} />
 	</pattern>
 
 	<!-- Floor background -->
 	<rect
 		width={LAB_WIDTH + GAP_SIZE * 2}
 		height={LAB_HEIGHT + GAP_SIZE * 2}
-		fill={cssVariables.colorSlate50}
+		fill={colors.slate50}
 	/>
 	<rect
 		x={GAP_SIZE}

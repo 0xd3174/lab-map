@@ -12,28 +12,6 @@
     "Helvetica Neue",
     sans-serif;
 
-  /* Base colors */
-  --color-white: #ffffff;
-
-  /* Slate Palette */
-  --color-slate-50: #f8fafc;
-  --color-slate-100: #f1f5f9;
-  --color-slate-200: #e2e8f0;
-  --color-slate-300: #cbd5e1;
-  --color-slate-400: #94a3b8;
-  --color-slate-500: #64748b;
-  --color-slate-600: #475569;
-  --color-slate-700: #334155;
-  --color-slate-900: #0f172a;
-
-  /* Zone Colors */
-  --color-zone-1: #6366f1;
-  --color-zone-2: #f59e0b;
-  --color-zone-3: #0ea5e9;
-  --color-zone-4: #10b981;
-  --color-zone-5: #06b6d4;
-  --color-zone-6: #f43f5e;
-
   /* UI Semantics */
   --color-backdrop: rgba(15, 23, 42, 0.4);
   --bg-primary: var(--color-white);
