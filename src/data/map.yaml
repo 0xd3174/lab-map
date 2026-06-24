@@ -47,12 +47,16 @@ rooms:
         shelves:
           - items: ["мерные колбы", "мерные цилиндры", "стаканы"]
           - items: ["мерные колбы"]
-      - name: "Шкаф 1"
+      - name: "Шкаф"
+        sublabel: "Пластик"
         type: "cabinet"
         x: 0
         y: 15
         w: 3
         h: 3
+        shelves:
+          - items: ["целлофановые пакеты (побольш)"]
+          - items: ["целлофановые пакеты (поменьш)"]
       - name: "Шкаф"
         sublabel: "Посуда"
         type: "cabinet"
