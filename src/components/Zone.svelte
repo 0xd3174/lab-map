@@ -95,13 +95,13 @@
 	}
 
 	.zone-label {
-		font-size: var(--text-sm);
+		font-size: var(--font-sm);
 		font-weight: 500;
 		user-select: none;
 	}
 
 	.zone-sublabel {
-		font-size: var(--text-xs);
+		font-size: var(--font-xs);
 		user-select: none;
 	}
 </style>
