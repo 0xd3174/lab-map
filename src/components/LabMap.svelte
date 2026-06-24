@@ -127,7 +127,7 @@
 					width="100%"
 					height="100%"
 					fill="none"
-					stroke="#94a3b8"
+					stroke={colors.slate400}
 					stroke-width="4"
 				/>
 
@@ -155,7 +155,7 @@
 				y1={door.y1}
 				x2={door.x2}
 				y2={door.y2}
-				stroke="#f8fafc"
+				stroke={colors.slate50}
 				stroke-width="8"
 				stroke-linecap="square"
 			/>
