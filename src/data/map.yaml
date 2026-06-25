@@ -80,7 +80,7 @@ rooms:
         y: 3
         w: 3
         h: 3
-      - name: "Форез"
+      - name: "Рентген"
         type: "bench"
         x: 0
         y: 6
