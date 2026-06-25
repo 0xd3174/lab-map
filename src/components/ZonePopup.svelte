@@ -77,6 +77,7 @@
 		display: flex;
 		flex-direction: column;
 		animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+		box-shadow: var(--box-shadow);
 	}
 
 	.header {

@@ -87,6 +87,7 @@
 		border-radius: 1.5rem;
 		border: 1px solid var(--color-slate-200);
 		height: 2.5rem;
+		box-shadow: var(--box-shadow);
 	}
 
 	.search-container:focus-within {
@@ -144,6 +145,7 @@
 		border: 1px solid var(--color-slate-200);
 		pointer-events: auto;
 		height: 2.5rem;
+		box-shadow: var(--box-shadow);
 	}
 
 	.zoom-controls button {
